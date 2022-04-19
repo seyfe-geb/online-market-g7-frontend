@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 import {useEffect} from "react";
 import User from "../../components/User/User";
+import "./Users.css"
 
 const Users = () => {
 
@@ -21,14 +22,14 @@ const Users = () => {
     const usersList = users.map(user => {
         return(
             <User
-                uid = {user.uid}
+                Userid = {user.uid}
                 firstName = {user.firstName}
                 lastName = {user.lastName}
                 />
         );
     });
     return (
-        <div className="users">
+        <div className="Users">
             {usersList}
         </div>
     );
