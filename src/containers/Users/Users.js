@@ -14,8 +14,8 @@ const Users = () => {
 
     useEffect(()=>{
         AxiosDataAccessService.getAllEntities(uri)
-            .then((res)=>{setUsers(res.data)})
-            .catch(error => console.log("Error fetching users"));
+            .then()
+            .catch();
     },[])
 
     const usersList = users.map(user => {
