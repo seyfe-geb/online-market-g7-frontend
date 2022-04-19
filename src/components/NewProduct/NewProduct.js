@@ -1,9 +1,30 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import {useNavigate} from "react-router";
 
 const NewProduct = () => {
-    return (
-        <div>
 
+   const navigate = useNavigate();
+  const newProductForm = useRef();
+
+    return (
+        <div className="NewProduct">
+        <form ref={newProductForm}>
+            <h1> Add Product</h1>
+
+            <label> Name</label>
+            <input type="text" label={"name"} name={"name"}/>
+            <br/> <br/>
+            <label> Price</label>
+            <input type="text" label={"price"} name={"price"}/>
+            <br/> <br/>
+            <label> </label>
+            <input type="text" label={"description"} name={"description"}/>
+            <br/> <br/>
+            <label> </label>
+            <input type="text" label={"quantity"} name={"quantity"}/>
+        </form>
+            <br/><br/>
+            <button> Add Product </button>
         </div>
     );
 };
