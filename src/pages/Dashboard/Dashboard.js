@@ -8,9 +8,9 @@ import Header from "../../containers/Headers/Header";
 const Dashboard = () => {
     return (
         <div>
-            {/*<div>*/}
-            {/*    <Header />*/}
-            {/*</div>*/}
+            <div>
+                <Header />
+            </div>
             <div>
                 <PageRoutes />
             </div>
