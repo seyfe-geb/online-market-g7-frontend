@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
+import axiosDataAccessService from "../../services/AxiosDataAccessService";
 
-const NewOrder = (props) => {
+
 
 const NewOrder = () => {
 
 
-    function newOrderForm() {
 
-    }
 
     const [orderState, setOrderState] = useState({
         id: "",
@@ -21,11 +20,14 @@ const NewOrder = () => {
             state:"",
             zipcode:""
         }
-    })
+    });
+    axiosDataAccessService.addEntity('cart',orderState)
+        .then(response=>{console.log(response)})
+        .catch(err=>{console.log(err)})
 
     return (
         <div>
-            <form ref={newOrderForm}>
+
                 <h1> Add Orders</h1>
 
                 <label> Name</label>
@@ -39,7 +41,7 @@ const NewOrder = () => {
                 <br/> <br/>
                 <label> </label>
                 <input type="text" label={"modifiedAt"} name={"modifiedAt"}/>
-            </form>
+
             <br/><br/>
             <button> Add Order </button>
 

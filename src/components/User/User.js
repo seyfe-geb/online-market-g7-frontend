@@ -1,6 +1,6 @@
 import React, {Fragment, useEffect} from 'react';
 import "./User.css"
-import {Card} from "@mui/material";
+import {Card, Stack} from "@mui/material";
 import Header from "../../containers/Headers/Header";
 
 
@@ -20,6 +20,8 @@ const User = (props) => {
         //     </Card.Body>
         // </Card>
         // </Fragment>
+
+
         <div className="User">
             <p> Id : {props.uid}&nbsp; &nbsp;
                 Name : {props.firstName}&nbsp; &nbsp;

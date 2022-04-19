@@ -6,10 +6,11 @@ import {Container} from "@mui/material";
 
 const Header = () => {
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar fill variant="tabs" bg="dark" variant="dark" >
             <Container>
                 <Navbar.Brand href="#home">G7 Online Shopping</Navbar.Brand>
                 <Nav className="me-auto">
+                    <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/users">Users</Nav.Link>
                     <Nav.Link href="/create-user">New User</Nav.Link>
                     <Nav.Link href="/products">Products</Nav.Link>

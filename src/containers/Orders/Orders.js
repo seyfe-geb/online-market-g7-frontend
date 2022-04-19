@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from "react";
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
-import User from "../../components/User/User";
+import './Orders.css'
 import Order from "../../components/Order/Order";
 import order from "../../components/Order/Order";
 
