@@ -6,7 +6,7 @@ class AxiosDataAccessService{
         return axios.get("http://localhost:9090/api/v1/" + uri);
     }
     getEntityById(uri, id){
-        return axios.get("http://localhost:9090/api/v1/" + id);
+        return axios.get("http://localhost:9090/api/v1/" + uri + "/" + id);
     }
     addEntity(uri, entity){
         return axios.post("http://localhost:9090/api/v1/" + uri, entity);
