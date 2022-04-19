@@ -5,6 +5,10 @@ const NewProduct = () => {
   //  const navigate = useNavigate();
 
 
+    function newProductForm() {
+
+    }
+
     return (
         <div>
         <form ref={newProductForm}>
