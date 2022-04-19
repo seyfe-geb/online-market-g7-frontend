@@ -1,16 +1,16 @@
 import React from 'react';
 
 const Order = (props) => {
-
-
     return (
         <div>
-          <p>{props.id}</p>
-          <p>{props.price}</p>
-          <P>{props.createdAt}</P>
-          <P>{props.modifiedAt}</P>
+
+             <p>OrderId: {props.id}</p>
+            <p>price:{props.price}</p>
+            <p>Date: {props.DateTimeFormat}</p>
+            <p>status:{props.status}</p>
+            <p>Address:{props.address}</p>
         </div>
     );
-}
+};
 
 export default Order;

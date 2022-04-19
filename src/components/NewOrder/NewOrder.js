@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+const NewOrder = (props) => {
 
 const NewOrder = () => {
 
@@ -6,6 +8,20 @@ const NewOrder = () => {
     function newOrderForm() {
 
     }
+
+    const [orderState, setOrderState] = useState({
+        id: "",
+        price: "",
+        Date: "",
+        status: "",
+        address:{
+            street: "",
+            apartmentNo:"",
+            city:"",
+            state:"",
+            zipcode:""
+        }
+    })
 
     return (
         <div>
