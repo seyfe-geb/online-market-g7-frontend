@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Product from "../../components/Product/Product";
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
+import "./Products.css"
 
 const Products = () => {
 
@@ -26,7 +27,7 @@ const Products = () => {
         />
     })
     return (
-        <div>
+        <div className={"products"}>
             {productList}
         </div>
     );

@@ -21,7 +21,9 @@ const User = (props) => {
         // </Card>
         // </Fragment>
         <div className="User">
-            <p>Id : {props.uid} &nbsp; &nbsp; &nbsp; First Name: {props.firstName} &nbsp; &nbsp; &nbsp; Last Name: {props.lastName}</p>
+            <p> Id : {props.uid}&nbsp; &nbsp;
+                Name : {props.firstName}&nbsp; &nbsp;
+                Last Name : {props.lastName}</p>
         </div>
     );
 };
