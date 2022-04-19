@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from "react";
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
-import User from "../../components/User/User";
+import './Orders.css'
 import Order from "../../components/Order/Order";
 import order from "../../components/Order/Order";
 
@@ -22,7 +22,7 @@ const Orders = () => {
     },[])
 
 
-    const ordersList = orders.map(order => {
+    const orderList = orders.map(order => {
         return(
             <Order
                 id = {order.id}
@@ -35,6 +35,7 @@ const Orders = () => {
     });
     return (
         <div className="orderPage">
+            {orderList}
             <h2>Order Page</h2>
             <div className="order">
                 <span>Order ID: {order.id}</span>

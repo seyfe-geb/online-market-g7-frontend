@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
+import axiosDataAccessService from "../../services/AxiosDataAccessService";
 
-const NewOrder = (props) => {
 
+
+const NewOrder = () => {
     const [orderState, setOrderState] = useState({
         id: "",
         price: "",
@@ -14,30 +16,32 @@ const NewOrder = (props) => {
             state:"",
             zipcode:""
         }
-    })
+    });
+    axiosDataAccessService.addEntity('cart',orderState)
+        .then(response=>{console.log(response)})
+        .catch(err=>{console.log(err)})
 
     return (
-      <div className="NewOrder">
-          <h1>Add Order</h1>
+        <div>
 
-          <label> Id </label>
-          <input type= "text" label={'id'} name={'id'} value={orderState.id} />
-          <br/><br/>
-          <label> Price </label>
-          <input type= "text" label={'price'} name={'price'} value={orderState.price} />
-          <br/><br/>
-          <label> Date </label>
-          <input type="text" label={'Order Date'} name={'Order Date'} value={orderState.Date.toLocaleString() + ""} />
-          <br/><br/>
-          <label> Status </label>
-          <input type= "text" label={"status"} name={'Order status'} value={orderState.status} />
-          <br/><br/>
-          <label> Address </label>
-          <input type= "text" label={"address"} name={'Shipping Address'} value={orderState.address.street} />
-          <br/><br/>
-          <br/><br/>
-          <button>Add Order</button>
-      </div>
+                <h1> Add Orders</h1>
+
+                <label> Name</label>
+                <input type="text" label={"id"} name={"id"}/>
+                <br/> <br/>
+                <label> Price</label>
+                <input type="text" label={"price"} name={"price"}/>
+                <br/> <br/>
+                <label>CreatedAt </label>
+                <input type="text" label={"createdAt"} name={"createdAt"}/>
+                <br/> <br/>
+                <label>ModifiedAt </label>
+                <input type="text" label={"modifiedAt"} name={"modifiedAt"}/>
+
+            <br/><br/>
+            <button> Add Order </button>
+
+        </div>
     );
 };
 

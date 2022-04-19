@@ -1,12 +1,29 @@
 import React, {useRef} from 'react';
 import {useNavigate} from "react-router";
+import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 
 const NewProduct = () => {
 
-   const navigate = useNavigate();
+
   const newProductForm = useRef();
 
-  const addBottonClicked = {}
+  const addButtonClicked = ()=>{
+      const form = newProductForm.current;
+      const data = {
+          name:form['name'].value,
+          price:form['price'].value,
+          description:form['description'].value,
+          quantity:form['quantity'].value,
+          id:1
+      }
+      AxiosDataAccessService.addEntity('products',data)
+          .then(response =>{console.log('Successfully added:',response)})
+          .catch(err =>{console.log('Error :', err)})
+  }
+
+  const addBottonClicked = () => {
+
+  }
 
     return (
         <div className="NewProduct">
@@ -26,7 +43,7 @@ const NewProduct = () => {
             <input type="text" label={"quantity"} name={"quantity"}/>
         </form>
             <br/><br/>
-            <button> Add Product </button>
+            <button onClick={addButtonClicked}> Add Product </button>
         </div>
     );
 };
