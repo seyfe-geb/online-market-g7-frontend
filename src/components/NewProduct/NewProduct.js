@@ -21,7 +21,9 @@ const NewProduct = () => {
           .catch(err =>{console.log('Error :', err)})
   }
 
+  const addBottonClicked = () => {
 
+  }
 
     return (
         <div className="NewProduct">

@@ -22,7 +22,7 @@ const Orders = () => {
     },[])
 
 
-    const ordersList = orders.map(order => {
+    const orderList = orders.map(order => {
         return(
             <Order
                 id = {order.id}
@@ -35,6 +35,7 @@ const Orders = () => {
     });
     return (
         <div className="orderPage">
+            {orderList}
             <h2>Order Page</h2>
             <div className="order">
                 <span>Order ID: {order.id}</span>

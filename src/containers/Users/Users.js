@@ -3,8 +3,6 @@ import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 import {useEffect} from "react";
 import User from "../../components/User/User";
 import "./Users.css"
-import {Nav, Navbar} from "react-bootstrap";
-import {Container} from "@mui/material";
 
 const Users = () => {
 

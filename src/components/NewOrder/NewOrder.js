@@ -4,10 +4,6 @@ import axiosDataAccessService from "../../services/AxiosDataAccessService";
 
 
 const NewOrder = () => {
-
-
-
-
     const [orderState, setOrderState] = useState({
         id: "",
         price: "",
@@ -36,10 +32,10 @@ const NewOrder = () => {
                 <label> Price</label>
                 <input type="text" label={"price"} name={"price"}/>
                 <br/> <br/>
-                <label> </label>
+                <label>CreatedAt </label>
                 <input type="text" label={"createdAt"} name={"createdAt"}/>
                 <br/> <br/>
-                <label> </label>
+                <label>ModifiedAt </label>
                 <input type="text" label={"modifiedAt"} name={"modifiedAt"}/>
 
             <br/><br/>
