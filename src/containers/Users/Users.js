@@ -6,7 +6,11 @@ import User from "../../components/User/User";
 const Users = () => {
 
     const uri = "users";
-    const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([
+        {id: 1, firstName: "Esei", lastName:"kahsai"},
+        {id: 2, firstName: "Seyfe", lastName:"mamo"},
+        {id: 3, firstName: "star", lastName:"tsegay"}
+    ]);
 
     useEffect(()=>{
         AxiosDataAccessService.getAllEntities(uri)
