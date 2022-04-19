@@ -1,48 +1,48 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import axiosDataAccessService from "../../services/AxiosDataAccessService";
 
+const NewOrder = (props) => {
 
+    const newOrderForm = useRef();
+    const [orderState, setOrderState] = useState([]);
 
-const NewOrder = () => {
-    const [orderState, setOrderState] = useState({
-        id: "",
-        price: "",
-        Date: "",
-        status: "",
-        address:{
-            street: "",
-            apartmentNo:"",
-            city:"",
-            state:"",
-            zipcode:""
-        }
-    });
-    axiosDataAccessService.addEntity('cart',orderState)
-        .then(response=>{console.log(response)})
-        .catch(err=>{console.log(err)})
+    const fetchOrder = async () => {
+        axiosDataAccessService.addEntity("carts", orderState)
+            .then(res => {
+                setOrderState(res.data);
+                console.log(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+
+    useEffect(() =>{
+
+        fetchOrder();
+    },[])
 
     return (
         <div>
-
+            <form ref={newOrderForm}>
                 <h1> Add Orders</h1>
-
-                <label> Name</label>
+                <br/>
+                <label> Id</label>
                 <input type="text" label={"id"} name={"id"}/>
-                <br/> <br/>
+                <br/>
                 <label> Price</label>
                 <input type="text" label={"price"} name={"price"}/>
-                <br/> <br/>
-                <label>CreatedAt </label>
+                <br/>
+                <label> createdAt </label>
                 <input type="text" label={"createdAt"} name={"createdAt"}/>
-                <br/> <br/>
-                <label>ModifiedAt </label>
+                <br/>
+                <label> modifiedAt </label>
                 <input type="text" label={"modifiedAt"} name={"modifiedAt"}/>
-
-            <br/><br/>
-            <button> Add Order </button>
-
+            </form>
+            <button onClick={fetchOrder}>Add Order</button>
         </div>
+
     );
-};
+}
 
 export default NewOrder;

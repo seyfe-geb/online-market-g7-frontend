@@ -10,18 +10,18 @@ const Cart = (props) => {
 
     const [totalPrice, setTotalPrice] = useState(0);
 
-    // useEffect(
-    //     () =>
-    //         setTotalPrice(
-    //             cartItems.reduce((total, item) => total + item.price * item.Qty, 0)
-    //         ),
-    //     [cartItems]
-    // );
-    useEffect(()=>{
-        AxiosDataAccessService.getAllEntities(uri)
-            .then(res => setTotalPrice(res.data))
-            .catch(error => console.log(error.message));
-    },[])
+    useEffect(
+        () =>
+            setTotalPrice(
+                cartItems.reduce((total, item) => total + item.price * item.Qty, 0)
+            ),
+        [cartItems]
+    );
+    // useEffect(()=>{
+    //     AxiosDataAccessService.getAllEntities(uri)
+    //         .then(res => setTotalPrice(res.data))
+    //         .catch(error => console.log(error.message));
+    // },[cartItems])
 
     return (
         <div className="cart">

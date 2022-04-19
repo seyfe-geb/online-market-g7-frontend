@@ -33,7 +33,7 @@ const NewUser = () => {
         }
 
         AxiosDataAccessService.addEntity('users',data)
-            .then(response =>{console.log('Successfully added:',response)})
+            .then(response =>{console.log('Successfully added:',response.data)})
             .catch(err =>{console.log('Error Seyfegeb:', err)})
     }
 
