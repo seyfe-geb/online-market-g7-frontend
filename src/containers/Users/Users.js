@@ -8,23 +8,23 @@ const Users = () => {
 
     const uri = "users";
     const [users, setUsers] = useState([
-        {id: 1, firstName: "Esei", lastName:"kahsai"},
-        {id: 2, firstName: "Seyfe", lastName:"mamo"},
-        {id: 3, firstName: "star", lastName:"tsegay"}
+        // {id: 1, firstName: "Esei", lastName:"kahsai"},
+        // {id: 2, firstName: "Seyfe", lastName:"mamo"},
+        // {id: 3, firstName: "star", lastName:"tsegay"}
     ]);
 
     useEffect(()=>{
         AxiosDataAccessService.getAllEntities(uri)
-            .then()
-            .catch();
+            .then(res => setUsers(res.data))
+            .catch(error => console.log(error.message));
     },[])
 
     const usersList = users.map(user => {
         return(
             <User
-                Userid = {user.uid}
-                firstName = {user.firstName}
-                lastName = {user.lastName}
+                uid={user.id}
+                firstName={user.firstName}
+                lastName={user.lastName}
                 />
         );
     });
