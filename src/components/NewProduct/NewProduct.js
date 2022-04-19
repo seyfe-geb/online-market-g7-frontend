@@ -6,6 +6,8 @@ const NewProduct = () => {
    const navigate = useNavigate();
   const newProductForm = useRef();
 
+  const addBottonClicked = {}
+
     return (
         <div className="NewProduct">
         <form ref={newProductForm}>

@@ -24,7 +24,7 @@ const Users = () => {
     const usersList = users.map(user => {
         return(
             <User
-                Userid = {user.uid}
+                Userid = {user.id}
                 firstName = {user.firstName}
                 lastName = {user.lastName}
                 />
