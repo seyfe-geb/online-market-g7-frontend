@@ -8,9 +8,9 @@ const Orders = () => {
 
     const uri = "orders";
     const [orders, setOrders] = useState([
-        // {oid:1, price:"123"},
-        // {oid:2, price: "234"},
-        // {oid:3, price: "456"}
+        {oid:1, price:"123"},
+        {oid:2, price: "234"},
+        {oid:3, price: "456"}
     ]);
 
     useEffect(()=>{

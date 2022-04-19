@@ -17,10 +17,10 @@ const NewProduct = () => {
             <label> Price</label>
             <input type="text" label={"price"} name={"price"}/>
             <br/> <br/>
-            <label> </label>
+            <label> Description </label>
             <input type="text" label={"description"} name={"description"}/>
             <br/> <br/>
-            <label> </label>
+            <label> Quantity </label>
             <input type="text" label={"quantity"} name={"quantity"}/>
         </form>
             <br/><br/>

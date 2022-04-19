@@ -13,7 +13,7 @@ const NewUser = () => {
             authorities:[form['role'].value]
 
         }
-        AxiosDataAccessService.addEntity('http://localhost:8080/api/v1/users',data)
+        AxiosDataAccessService.addEntity('users',data)
             .then(response =>{console.log('Successfully added:',response)})
             .catch(err =>{console.log('Error :', err)})
     }

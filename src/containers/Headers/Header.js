@@ -1,21 +1,24 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './Header.css';
+import {Nav, Navbar} from "react-bootstrap";
+import {Container} from "@mui/material";
 
 const Header = () => {
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li><Link to="/users"> Users</Link></li>
-                    <li><Link to="/create-user"> New User </Link></li>
-                    <li><Link to="/products"> Products</Link></li>
-                    <li><Link to="/create-product"> New Product </Link></li>
-                    <li><Link to="/orders"> Orders</Link></li>
-                    <li><Link to="/create-order"> New Order </Link></li>
-                </ul>
-            </nav>
-        </div>
+        <Navbar bg="primary" variant="dark">
+            <Container>
+                <Navbar.Brand href="#home">G7 Online Shopping</Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link href="/users">Users</Nav.Link>
+                    <Nav.Link href="/create-user">New User</Nav.Link>
+                    <Nav.Link href="/products">Products</Nav.Link>
+                    <Nav.Link href="/create-product">New Product</Nav.Link>
+                    <Nav.Link href="/orders">Orders</Nav.Link>
+                    <Nav.Link href="/create-order">New Order</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
     );
 };
 

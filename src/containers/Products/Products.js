@@ -6,7 +6,7 @@ const Products = () => {
 
     const uri = "products";
     const [products, setProducts] = useState([
-        // {id:1, name:"laptop", price:"1000", description:"I like it", quantity:"2"}
+        {id:1, name:"laptop", price:"1000", description:"I like it", quantity:"2"}
     ]);
 
     useEffect(()=>{

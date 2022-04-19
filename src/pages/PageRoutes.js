@@ -6,11 +6,12 @@ import NewUser from "../components/NewUser/NewUser";
 import NewProduct from "../components/NewProduct/NewProduct";
 import Orders from "../containers/Orders/Orders";
 import NewOrder from "../components/NewOrder/NewOrder";
+import Header from "../containers/Headers/Header";
 
 const PageRoutes = () => {
     return (
         <Routes>
-            <Route path="/" element={<Navigate replace to="/users"/>}/>
+            <Route path="/" element={<Header/>}/>
             <Route path="users" element={<Users/>}/>
             <Route path="create-user" element={<NewUser/>}/>
             <Route path="products" element={<Products/>}/>
