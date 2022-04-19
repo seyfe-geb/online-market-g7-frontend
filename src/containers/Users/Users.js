@@ -21,14 +21,14 @@ const Users = () => {
     const usersList = users.map(user => {
         return(
             <User
-                uid = {user.id}
+                uid = {user.uid}
                 firstName = {user.firstName}
                 lastName = {user.lastName}
                 />
         );
     });
     return (
-        <div>
+        <div className="users">
             {usersList}
         </div>
     );
