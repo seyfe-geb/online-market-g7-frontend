@@ -1,4 +1,4 @@
-
+import React from "react";
 
 const Reward = (props) => {
     return (
@@ -10,3 +10,4 @@ const Reward = (props) => {
         </div>
     )
 }
+export default Reward;
