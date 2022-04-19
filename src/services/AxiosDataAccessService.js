@@ -2,6 +2,7 @@
 import axios from 'axios';
 
 class AxiosDataAccessService{
+
     getAllEntities(uri){
         return axios.get("http://localhost:9090/api/v1/" + uri);
     }

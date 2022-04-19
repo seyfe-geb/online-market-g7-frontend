@@ -1,16 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import Product from "../../components/Product/Product";
+import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 
 const Products = () => {
 
     const uri = "products";
-    const [products, setproducts] = useState([
-        {id:1, name:"laptop", price:"1000", description:"I like it", quantity:"2"}
+    const [products, setProducts] = useState([
+        // {id:1, name:"laptop", price:"1000", description:"I like it", quantity:"2"}
     ]);
 
-    useEffect(() => {
-
-    })
+    useEffect(()=>{
+        AxiosDataAccessService.getAllEntities(uri)
+            .then(res => setProducts(res.data))
+            .catch(error => console.log(error.message));
+    },[])
 
     const productList = products.map(pro => {
       return  <Product

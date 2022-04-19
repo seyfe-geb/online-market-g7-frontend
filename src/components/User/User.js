@@ -6,9 +6,7 @@ const User = (props) => {
 
     return (
         <div className="User">
-            <p>Id : {props.uid}</p>
-            <p>First Name: {props.firstName}</p>
-            <p>Last Name: {props.lastName}</p>
+            <p>Id : {props.uid} &nbsp; &nbsp; &nbsp; First Name: {props.firstName} &nbsp; &nbsp; &nbsp; Last Name: {props.lastName}</p>
         </div>
     );
 };
