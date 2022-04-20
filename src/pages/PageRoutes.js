@@ -15,7 +15,9 @@ const PageRoutes = () => {
             <Route path="/" element={<Home/>}/>
             <Route path="users" element={<Users/>}/>
             <Route path="create-user" element={<NewUser/>}/>
-            <Route path="products" element={<Products/>}/>
+            <Route path="products" element={<Products/>}>
+                <Route path=":id" element={<Cart/>}/>
+            </Route>
             <Route path="create-product" element={<NewProduct/>}/>
             <Route path="orders" element={<Orders/>}/>
             <Route path="create-order" element={<NewOrder/>}/>
