@@ -6,25 +6,25 @@ import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 const Cart = (props) => {
 
     const params = useParams();
+    //
+    // const uri = "carts";
+    // const {cartItems, Add, Remove} = props;
+    //
+    // const [totalPrice, setTotalPrice] = useState(0);
+    // const [product, setProduct] = useState({});
 
-    const uri = "carts";
-    const {cartItems, Add, Remove} = props;
-
-    const [totalPrice, setTotalPrice] = useState(0);
-    const [product, setProduct] = useState({});
-
-    useEffect(
-        () =>
-            setTotalPrice(
-                cartItems.reduce((total, item) => total + item.price * item.Qty, 0)
-            ),
-        [cartItems]
-    );
-    useEffect(() => {
-        AxiosDataAccessService.getEntityById("products/", params.id)
-            .then(res => setProduct(res.data))
-            .catch(error => console.log(error.message));
-    }, []);
+    // useEffect(
+    //     () =>
+    //         setTotalPrice(
+    //             cartItems.reduce((total, item) => total + item.price * item.Qty, 0)
+    //         ),
+    //     [cartItems]
+    // );
+    // useEffect(() => {
+    //     AxiosDataAccessService.getEntityById("products/", params.id)
+    //         .then(res => setProduct(res.data))
+    //         .catch(error => console.log(error.message));
+    // }, []);
     // useEffect(()=>{
     //     AxiosDataAccessService.getAllEntities(uri)
     //         .then(res => setTotalPrice(res.data))
@@ -69,7 +69,7 @@ const Cart = (props) => {
 //         }
     return(
         <div>
-            {product}
+            <h1>Hi</h1>
         </div>
     );
 }

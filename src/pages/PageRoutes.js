@@ -20,7 +20,7 @@ const PageRoutes = () => {
             </Route>
             <Route path="create-product" element={<NewProduct/>}/>
             <Route path="orders" element={<Orders/>}/>
-            <Route path="create-order" element={<NewOrder/>}/>
+            {/*<Route path="create-order" element={<NewOrder/>}/>*/}
             <Route path="carts" element={<Cart/>}/>
         </Routes>
     );
