@@ -34,7 +34,7 @@ const NewUser = () => {
 
         AxiosDataAccessService.addEntity('users',data)
             .then(response =>{console.log('Successfully added:',response)})
-            .catch(err =>{console.log('Error Sey:', err)})
+            .catch(err =>{console.log('Error :', err)})
     }
 
     return (
