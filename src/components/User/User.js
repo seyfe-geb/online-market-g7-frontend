@@ -22,7 +22,7 @@ const User = (props) => {
 
 
         <div className="User">
-            <p> Id : {props.uid}&nbsp; &nbsp;
+            <p> Id : {props.id}&nbsp; &nbsp;
                 Name : {props.firstName}&nbsp; &nbsp;
                 Last Name : {props.lastName}</p>
         </div>

@@ -6,7 +6,7 @@ import {Container} from "@mui/material";
 
 const Header = () => {
     return (
-        <Navbar fill variant="tabs" bg="dark" variant="dark" >
+        <Navbar className="justify-content-center" fill variant="tabs" bg="dark" variant="dark" >
             <Container>
                 <Navbar.Brand href="#home">G7 Online Shopping</Navbar.Brand>
                 <Nav className="me-auto">

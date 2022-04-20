@@ -17,11 +17,11 @@ const Cart = (props) => {
             ),
         [cartItems]
     );
-    // useEffect(()=>{
-    //     AxiosDataAccessService.getAllEntities(uri)
-    //         .then(res => setTotalPrice(res.data))
-    //         .catch(error => console.log(error.message));
-    // },[cartItems])
+    useEffect(()=>{
+        AxiosDataAccessService.getAllEntities(uri)
+            .then(res => setTotalPrice(res.data))
+            .catch(error => console.log(error.message));
+    },[cartItems])
 
     return (
         <div className="cart">
