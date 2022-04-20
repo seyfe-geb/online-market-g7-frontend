@@ -1,12 +1,14 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 import './NewUser.css'
-import axios from "axios";
+
 import {useNavigate} from "react-router";
+
 const NewUser = () => {
 
     const navigate = useNavigate();
     const newUserForm = useRef();
+
 
     function myFunction() {
         let checkBox = document.getElementById("myCheck");
@@ -28,6 +30,7 @@ const NewUser = () => {
             textzip.value="";
         }
     }
+
 
     const  addButtonClicked = (e) =>{
         e.preventDefault();
@@ -60,41 +63,42 @@ const NewUser = () => {
             .catch(err =>{console.log('Error :', err)})
     }
 
+
     return (
         <div className="newUser">
             <form ref={newUserForm} onSubmit={addButtonClicked}>
                 <h1>Add User</h1>
                 <br/>
                 <label>First Name</label>
-                <input type="text" label={'firstName'} name={'firstName'} />
+                <input type="text" label={'firstName'} name={'firstName'} placeholder="First Name" />
 
                 <br/><br/>
 
                 <label>Last Name</label>
-                <input type="text" label={'lastName'} name={'lastName'} />
+                <input type="text" label={'lastName'} name={'lastName'} placeholder="Last Name"/>
 
                 <br/><br/>
                 <label>Email</label>
-                <input type="text" label={'Email'} name={'email'} />
+                <input type="text" label={'Email'} name={'email'} placeholder="name@example.com"/>
 
                 <br/><br/>
                 <label>User Name</label>
-                <input type="text" label={'username'} name={'username'} />
+                <input type="text" label={'username'} name={'username'} placeholder="Username"/>
 
                 <br/><br/>
                 <label>Password</label>
-                <input type="text" label={'password'} name={'password'} />
+                <input type="text" label={'password'} name={'password'} placeholder="Password"/>
 
                 <br/><br/>
 
                 <div className="billing" >
                     <label> Shipping Address </label><br/>
-                    Street:<input type= "text" label={"b-street"} name={'b-street'} id="bstreet" /> &nbsp;&nbsp;&nbsp;&nbsp;
-                    City:<input type= "text" label={"b-city"} name={'b-city'} id="bcity"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Street:<input type= "text" label={"b-street"} name={'b-street'} id="bstreet" placeholder="Street*"/> &nbsp;&nbsp;&nbsp;&nbsp;
+                    City:<input type= "text" label={"b-city"} name={'b-city'} id="bcity"placeholder="City*"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <br/>
-                    State:<input type= "text" label={"b-state"} name={'b-state'} id="bstate" /> &nbsp;&nbsp;&nbsp;&nbsp;
-                    Zipcode:<input type= "text" label={"b-zipcode"} name={'b-zipcode'} id="bzip"/>  &nbsp;&nbsp;&nbsp;&nbsp;
+                    State:<input type= "text" label={"b-state"} name={'b-state'} id="bstate" placeholder="State*"/> &nbsp;&nbsp;&nbsp;&nbsp;
+                    Zipcode:<input type= "text" label={"b-zipcode"} name={'b-zipcode'} id="bzip " placeholder="Zip Code*"/>  &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <input type="checkbox" id="myCheck" onClick={myFunction}/>
                     <label htmlFor="myCheck">Same as Shipping Address:</label>
@@ -103,12 +107,12 @@ const NewUser = () => {
 
                 <div className="shipping" id="billing">
                     <label> Billing Address </label><br/>
-                    Street:<input type= "text" label={"sh-street"} name={'sh-street'} id="sstreet"/> &nbsp;&nbsp;&nbsp;&nbsp;
-                    City:<input type= "text" label={"sh-city"} name={'sh-city'} id="scity"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Street:<input type= "text" label={"sh-street"} name={'sh-street'} id="sstreet" placeholder="Street*"/> &nbsp;&nbsp;&nbsp;&nbsp;
+                    City:<input type= "text" label={"sh-city"} name={'sh-city'} id="scity" placeholder="City*"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <br/>
-                    State:<input type= "text" label={"sh-state"} name={'sh-state'} id="sstate"/> &nbsp;&nbsp;&nbsp;&nbsp;
-                    Zipcode:<input type= "text" label={"sh-zipcode"} name={'sh-zipcode'} id="szip"/>  &nbsp;&nbsp;&nbsp;&nbsp;
+                    State:<input type= "text" label={"sh-state"} name={'sh-state'} id="sstate" placeholder="State*"/> &nbsp;&nbsp;&nbsp;&nbsp;
+                    Zipcode:<input type= "text" label={"sh-zipcode"} name={'sh-zipcode'} id="szip"placeholder="Zip Code*"/>  &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
 
                 <br/><br/>
@@ -123,6 +127,7 @@ const NewUser = () => {
                 <button className="btn">Add User</button>
 
                 <br/><br/><br/><br/>
+
             </form>
         </div>
     );

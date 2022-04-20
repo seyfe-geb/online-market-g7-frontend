@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+
 import './Header.css';
 import {Nav, Navbar} from "react-bootstrap";
 import {Container} from "@mui/material";
@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <Navbar className="justify-content-center" fill variant="tabs" bg="dark" variant="dark" >
             <Container>
-                <Navbar.Brand href="#home">G7 Online Shopping</Navbar.Brand>
+                <Navbar.Brand href="#home">GS Online Shopping</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/users">Users</Nav.Link>

@@ -5,11 +5,13 @@ import {BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
+      <div className="appdiv">
       <BrowserRouter>
           <div className="App">
               <Dashboard/>
           </div>
       </BrowserRouter>
+      </div>
   );
 }
 

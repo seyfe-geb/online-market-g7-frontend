@@ -11,6 +11,8 @@
 }
 
 .User:hover{
-    background-color: #ff0059;
-    color: white;
+    background-color: #1475ab;
+    color: #00f4e6;
+    font-family: cursive;
+    font-size: large;
 }

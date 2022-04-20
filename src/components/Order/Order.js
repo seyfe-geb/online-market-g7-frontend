@@ -2,7 +2,7 @@ import React from 'react';
 
 const Order = (props) => {
     return (
-        <div>
+        <div className="">
             <p>OrderId: {props.id}</p>
             <p>price:{props.price}</p>
             <p>Date: {props.Date}</p>
