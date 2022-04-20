@@ -36,8 +36,7 @@ const Products = () => {
     })
     return (
         <div className={"products"}>
-            {productList}
-            {params.id}
+            { params.id? <Cart id={params.id}/> : productList}
         </div>
     );
 };
