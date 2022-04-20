@@ -16,8 +16,12 @@ const Products = () => {
             .catch(error => console.log(error.message));
     },[])
 
+
+
     const productList = products.map(pro => {
-      return  <Product
+      return (
+         <Link to={`${product.id}`} key={product.id}>
+          <Product
         id={pro.id}
         name={pro.name}
         price={pro.price}
@@ -25,10 +29,12 @@ const Products = () => {
         quantity={pro.quantity}
         key={pro.id}
         />
+        </Link>);
     })
     return (
         <div className={"products"}>
             {productList}
+            <ProductDetails />
         </div>
     );
 };
