@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Product from "../../components/Product/Product";
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 import "./Products.css"
+import {Link} from "@mui/material";
 
 const Products = () => {
 
@@ -34,7 +35,7 @@ const Products = () => {
     return (
         <div className={"products"}>
             {productList}
-            <ProductDetails />
+            {/*<ProductDetails />*/}
         </div>
     );
 };

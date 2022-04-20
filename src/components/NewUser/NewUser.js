@@ -15,11 +15,13 @@ const NewUser = () => {
         let textstate = document.getElementById("sstate");
         let textzip = document.getElementById("szip");
         if (checkBox.checked == true){
+            document.getElementById("billing").style.display="none";
             textStreet.value = document.getElementById("bstreet").value;
             textcity.value = document.getElementById("bcity").value;
             textstate.value = document.getElementById("bstate").value;
             textzip.value = document.getElementById("bzip").value;
         } else {
+            document.getElementById("billing").style.display="block";
             textStreet.value="";
             textcity.value="";
             textstate.value="";
@@ -86,7 +88,7 @@ const NewUser = () => {
                 <br/><br/>
 
                 <div className="billing" >
-                    <label> Billing Address </label><br/>
+                    <label> Shipping Address </label><br/>
                     Street:<input type= "text" label={"b-street"} name={'b-street'} id="bstreet" /> &nbsp;&nbsp;&nbsp;&nbsp;
                     City:<input type= "text" label={"b-city"} name={'b-city'} id="bcity"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -99,8 +101,8 @@ const NewUser = () => {
 
                    <br/>
 
-                <div className="shipping" >
-                    <label> Shipping Address </label><br/>
+                <div className="shipping" id="billing">
+                    <label> Billing Address </label><br/>
                     Street:<input type= "text" label={"sh-street"} name={'sh-street'} id="sstreet"/> &nbsp;&nbsp;&nbsp;&nbsp;
                     City:<input type= "text" label={"sh-city"} name={'sh-city'} id="scity"/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
