@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Product from "../../components/Product/Product";
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 import "./Products.css"
@@ -20,17 +20,18 @@ const Products = () => {
     },[])
 
 
+
     const productList = products.map(pro => {
       return (
          <Link to={`${pro.id}`} key={pro.id}>
-              <Product
-            id={pro.id}
-            name={pro.name}
-            price={pro.price}
-            description={pro.description}
-            quantity={pro.quantity}
-            key={pro.id}
-            />
+          <Product
+        id={pro.id}
+        name={pro.name}
+        price={pro.price}
+        description={pro.description}
+        quantity={pro.quantity}
+        key={pro.id}
+        />
         </Link>);
     })
     return (
