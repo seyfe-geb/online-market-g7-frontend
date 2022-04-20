@@ -5,9 +5,9 @@ const Order = (props) => {
         <div>
             <p>OrderId: {props.id}</p>
             <p>price:{props.price}</p>
-            <p>Date: {props.DateTimeFormat}</p>
+            <p>Date: {props.Date}</p>
             <p>status:{props.status}</p>
-            <p>Address:{props.address}</p>
+            {/*<p>Address:{props.address}</p>*/}
         </div>
     );
 };

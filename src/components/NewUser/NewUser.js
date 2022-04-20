@@ -2,8 +2,10 @@ import React, {useRef} from 'react';
 import AxiosDataAccessService from "../../services/AxiosDataAccessService";
 import './NewUser.css'
 import axios from "axios";
+import {useNavigate} from "react-router";
 const NewUser = () => {
 
+    const navigate = useNavigate();
     const newUserForm = useRef();
 
     function myFunction() {
@@ -52,8 +54,8 @@ const NewUser = () => {
         }
 
         AxiosDataAccessService.addEntity('users',data)
-            .then(response =>{console.log('Successfully added:',response.data)})
-            .catch(err =>{console.log('Error Seyfegeb:', err)})
+            .then(response =>{console.log('Successfully added:',response); navigate("/users")})
+            .catch(err =>{console.log('Error :', err)})
     }
 
     return (
